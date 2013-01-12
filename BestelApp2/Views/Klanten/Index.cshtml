@@ -1,0 +1,82 @@
+﻿@model IEnumerable<BestelApp2.Models.Klanten>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.KlantNaam)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KlantVoorNaam)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AanspreekTitel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BTW)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefoon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gsm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fax)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.KlantNaam)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KlantVoorNaam)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AanspreekTitel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BTW)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefoon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gsm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fax)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.KlantId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.KlantId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.KlantId })
+        </td>
+    </tr>
+}
+
+</table>

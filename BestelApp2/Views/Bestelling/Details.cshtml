@@ -1,0 +1,30 @@
+﻿@model BestelApp2.Models.Bestellingen
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Bestellingen</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Datum)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Datum)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsTemplate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsTemplate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.BestellingId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

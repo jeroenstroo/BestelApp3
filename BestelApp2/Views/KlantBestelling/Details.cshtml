@@ -1,0 +1,43 @@
+﻿@model BestelApp2.Models.Bestellingen
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Bestellingen</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BestellingsNaam)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BestellingsNaam)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Datum)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Datum)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsTemplate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsTemplate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserProfile.UserName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserProfile.UserName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.BestellingId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

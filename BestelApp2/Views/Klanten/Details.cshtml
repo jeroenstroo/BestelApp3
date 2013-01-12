@@ -1,0 +1,79 @@
+﻿@model BestelApp2.Models.Klanten
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Klanten</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.KlantNaam)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.KlantNaam)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.KlantVoorNaam)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.KlantVoorNaam)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AanspreekTitel)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AanspreekTitel)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BTW)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BTW)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Adres)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Adres)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Telefoon)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Telefoon)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Gsm)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Gsm)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Fax)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Fax)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.KlantId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

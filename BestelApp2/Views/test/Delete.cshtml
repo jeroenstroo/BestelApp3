@@ -1,0 +1,53 @@
+﻿@model BestelApp2.Models.Bestellingen
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Bestellingen</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BestellingsNaam)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BestellingsNaam)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Datum)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Datum)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsTemplate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsTemplate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Opmerkingen)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Opmerkingen)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserProfile.UserName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserProfile.UserName)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

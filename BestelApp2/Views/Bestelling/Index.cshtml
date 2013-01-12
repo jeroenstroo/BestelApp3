@@ -1,0 +1,52 @@
+﻿@model IEnumerable<BestelApp2.Models.Bestellingen>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BestellingsNaam)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserProfile.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Datum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsTemplate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BestellingsNaam)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserProfile.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Datum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsTemplate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BestellingId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BestellingId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BestellingId })
+        </td>
+    </tr>
+}
+
+</table>

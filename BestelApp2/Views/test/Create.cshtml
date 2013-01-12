@@ -1,0 +1,67 @@
+﻿@model BestelApp2.Models.Bestellingen
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Bestellingen</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BestellingsNaam)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BestellingsNaam)
+            @Html.ValidationMessageFor(model => model.BestellingsNaam)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Datum)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Datum)
+            @Html.ValidationMessageFor(model => model.Datum)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsTemplate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsTemplate)
+            @Html.ValidationMessageFor(model => model.IsTemplate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Opmerkingen)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Opmerkingen)
+            @Html.ValidationMessageFor(model => model.Opmerkingen)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserId, "UserProfile")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("UserId", String.Empty)
+            @Html.ValidationMessageFor(model => model.UserId)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

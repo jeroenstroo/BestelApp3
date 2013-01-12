@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestelApp2", "BestelApp2\BestelApp2.csproj", "{F4F5DB0A-CAD7-4CAD-A4D0-AB42447EE4CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfKlantenClient", "WpfKlantenClient\WpfKlantenClient.csproj", "{DADA7804-F6A1-4685-BEC6-0D9EF6F113A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4F5DB0A-CAD7-4CAD-A4D0-AB42447EE4CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F5DB0A-CAD7-4CAD-A4D0-AB42447EE4CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F5DB0A-CAD7-4CAD-A4D0-AB42447EE4CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F5DB0A-CAD7-4CAD-A4D0-AB42447EE4CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DADA7804-F6A1-4685-BEC6-0D9EF6F113A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DADA7804-F6A1-4685-BEC6-0D9EF6F113A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DADA7804-F6A1-4685-BEC6-0D9EF6F113A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DADA7804-F6A1-4685-BEC6-0D9EF6F113A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

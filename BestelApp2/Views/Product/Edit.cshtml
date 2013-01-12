@@ -1,0 +1,46 @@
+﻿@model BestelApp2.Models.Producten
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Producten</legend>
+
+        @Html.HiddenFor(model => model.ProductId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ProductNaam)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ProductNaam)
+            @Html.ValidationMessageFor(model => model.ProductNaam)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CategorieId, "Categorie")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("CategorieId")
+            @Html.ValidationMessageFor(model => model.CategorieId)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

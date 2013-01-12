@@ -1,0 +1,102 @@
+﻿@model BestelApp2.Models.Klanten
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Klanten</legend>
+
+        @Html.HiddenFor(model => model.KlantId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.KlantNaam)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.KlantNaam)
+            @Html.ValidationMessageFor(model => model.KlantNaam)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.KlantVoorNaam)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.KlantVoorNaam)
+            @Html.ValidationMessageFor(model => model.KlantVoorNaam)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AanspreekTitel)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AanspreekTitel)
+            @Html.ValidationMessageFor(model => model.AanspreekTitel)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BTW)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BTW)
+            @Html.ValidationMessageFor(model => model.BTW)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Adres)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Adres)
+            @Html.ValidationMessageFor(model => model.Adres)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Telefoon)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Telefoon)
+            @Html.ValidationMessageFor(model => model.Telefoon)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Gsm)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Gsm)
+            @Html.ValidationMessageFor(model => model.Gsm)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Fax)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Fax)
+            @Html.ValidationMessageFor(model => model.Fax)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

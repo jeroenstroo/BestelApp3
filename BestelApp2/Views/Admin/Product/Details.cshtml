@@ -1,0 +1,23 @@
+﻿@model BestelApp2.Models.Producten
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Producten</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ProductNaam)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductNaam)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ProductId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
